@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4cker 3thique — Web Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Web</a>
+            <a href="#">Images</a>
+            <a href="#demo" class="signin-button">Démo</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="logo" aria-label="H4cker">
+            <span class="g1">H</span><span class="o1">4</span><span class="o2">c</span><span class="g2">k</span><span class="l1">e</span><span class="e1">r</span>
+        </div>
+
+        <p class="subtitle">Laboratoire web pédagogique</p>
+
+        <form class="search-box" id="searchForm">
+            <span aria-hidden="true">⌕</span>
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Tester une recherche..."
+                aria-label="Recherche de démonstration"
+            >
+        </form>
+
+        <div class="buttons">
+            <button type="submit" form="searchForm">Rechercher</button>
+            <button type="button" id="demoButton">J'ai de la chance</button>
+        </div>
+
+        <p id="result" role="status" aria-live="polite"></p>
+
+        <section id="demo">
+            <p>Environnement de test — aucune donnée envoyée à un serveur.</p>
+        </section>
+    </main>
+
+    <footer>
+        <span>H4cker 3thique</span>
+        <span>Apprendre · Tester · Protéger</span>
+    </footer>
+
+    <script>
+        const form = document.getElementById("searchForm");
+        const input = document.getElementById("searchInput");
+        const result = document.getElementById("result");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const query = input.value.trim();
+            result.textContent = query
+                ? "Recherche de démonstration : " + query
+                : "Entre un texte pour commencer.";
+        });
+
+        document.getElementById("demoButton").addEventListener("click", function() {
+            result.textContent = "Le laboratoire fonctionne !";
+        });
+    </script>
+</body>
+</html>
