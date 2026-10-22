@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #202124;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 28px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 13px;
+}
+
+nav a {
+    color: #3c4043;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .signin-button {
+    padding: 11px 23px;
+    background: #1a73e8;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.logo {
+    font-size: clamp(58px, 10vw, 85px);
+    font-weight: bold;
+    letter-spacing: -4px;
+    margin-bottom: 8px;
+}
+
+.g1 { color: #4285f4; }
+.o1 { color: #ea4335; }
+.o2 { color: #fbbc05; }
+.g2 { color: #4285f4; }
+.l1 { color: #34a853; }
+.e1 { color: #ea4335; }
+
+.subtitle {
+    font-size: 14px;
+    color: #70757a;
+    margin-bottom: 28px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(584px, 90vw);
+    padding: 0 18px;
+    border: 1px solid #dfe1e5;
+    border-radius: 28px;
+    height: 48px;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    box-shadow: 0 1px 6px #20212430;
+    border-color: transparent;
+}
+
+.search-box span {
+    font-size: 25px;
+    color: #9aa0a6;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: #202124;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.buttons button {
+    padding: 10px 16px;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    background: #f8f9fa;
+    color: #3c4043;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px #00000010;
+}
+
+#result {
+    margin-top: 28px;
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+#demo {
+    margin-top: 32px;
+    color: #70757a;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 28px;
+    background: #f2f2f2;
+    color: #70757a;
+    font-size: 13px;
+}
+
+@media (max-width: 500px) {
+    footer {
+        justify-content: center;
+    }
+}
